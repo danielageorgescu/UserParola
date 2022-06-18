@@ -1,0 +1,34 @@
+package com.itfactory;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduceti userul: ");
+        String user = scanner.nextLine();
+        String numeUser = "Daniela Georgescu";
+        if(user.contentEquals(numeUser)) {
+            System.out.println("Userul " + user + " s-a autentificat in aplicatie.");
+        } else{
+            while (!user.equalsIgnoreCase(numeUser)) {
+                System.out.println("Credentiale gresite. Mai incercati o data");
+                        user = scanner.nextLine();
+            }
+            System.out.println("Userul " + user + " s-a autentificat in aplicatie.");
+        }
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.println("Introduceti parola: ");
+        String parola = scanner.nextLine();
+        String parolaCorecta = "Daniela G";
+        if(parola.matches(parolaCorecta)) {
+            System.out.println("Userul " + user + " s-a autentificat in aplicatie.");
+        } else{
+            while (!parola.contentEquals(parolaCorecta)) {
+                System.out.println("Credentiale gresite. Mai incercati o data");
+                        parola = scanner.nextLine();
+            }
+            System.out.println("Userul " + user + " s-a autentificat in aplicatie.");
+        }
+    }
+}
